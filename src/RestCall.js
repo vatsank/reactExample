@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DataTableRow from './DataTableRow';
+import './App.css';
 
 
 class RestCall extends Component{
@@ -22,13 +23,14 @@ class RestCall extends Component{
     render(props){
 
                return(
-                   
-                       this.state.items.map(item=>
-                        
-                            <DataTableRow data={item}></DataTableRow>
-                                           
-                
-               ))
+                      <table className='table table-striped'>
+                      <tbody>
+                        <DataTableRow data={this.state.items}></DataTableRow>
+                        </tbody>
+                        </table>
+               )
+
+               
 
 }
     }

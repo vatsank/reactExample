@@ -1,12 +1,22 @@
 import React, { Component } from 'react'
 
-export default class componentName extends Component {
+export default class DataTableRow extends Component {
   render() {
-    return (<tr key={this.props.data.id}>
-        <td>{this.props.data.username}</td>
-        <td>{this.props.data.email}</td>
-    </tr>
-);
+
+      return (
+        this.props.data.map(( listValue, index ) => {
+          return (
+        <tr key={index}>
+          <td>{listValue.id}</td>
+          <td>{listValue.username}</td>
+          <td>{listValue.email}</td>
+        </tr>
+          )
+
+        }
+      )
+    )
+
 
   }
 }

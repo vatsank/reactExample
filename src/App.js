@@ -27,9 +27,6 @@ class App extends Component {
 
                </ul>
                <hr />
-               <div>
-               </div>
-              
                <Switch>
                   <Route exact path='/' component={Home} />
                   <Route exact path='/Login' component={Login} />
@@ -37,6 +34,7 @@ class App extends Component {
                   <Route exact path='/register' component={RegisterForm} />
 
                </Switch>
+
             </div>
          </Router>
 
